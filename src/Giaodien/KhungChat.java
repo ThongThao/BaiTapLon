@@ -17,10 +17,12 @@ import javax.swing.JEditorPane;
 import javax.swing.JLabel;
 import com.jgoodies.forms.factories.DefaultComponentFactory;
 import java.awt.Panel;
+import javax.swing.JTextField;
 
 public class KhungChat extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField tfName;
 
 	/**
 	 * Launch the application.
@@ -90,5 +92,19 @@ public class KhungChat extends JFrame {
 		lblNewLabel_2.setIcon(new ImageIcon(KhungChat.class.getResource("/Img/hr (1).png")));
 		lblNewLabel_2.setBounds(122, 60, 264, 3);
 		contentPane.add(lblNewLabel_2);
+		
+		tfName = new JTextField();
+		tfName.setBounds(181, 10, 138, 40);
+		contentPane.add(tfName);
+		tfName.setColumns(10);
+		tfName.setEditable(false);
+
+		
+		JButton btnOut = new JButton("");
+		btnOut.setBackground(new Color(0, 64, 128));
+		btnOut.setBorderPainted(false);
+		btnOut.setIcon(new ImageIcon(KhungChat.class.getResource("/Img/out (1).png")));
+		btnOut.setBounds(416, 10, 58, 53);
+		contentPane.add(btnOut);
 	}
 }
