@@ -1,10 +1,13 @@
-package Giaodien;
+package Client;
 
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import GetandSet.User;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -13,22 +16,47 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
-public class Login extends JFrame {
+public class LoginUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField usernameField;
 	private JPasswordField passwordField;
+	JButton ButtonLogin = new JButton("Login");
+	JButton btnExit = new JButton("Exit");
+	ArrayList<User> listuser;
 
 	/**
 	 * Launch the application.
 	 */
+	public void Event() {
+		ButtonLogin.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				dispose();
+				ClientUI client = new ClientUI();
+				client.setVisible(true);
+			}
+			
+		});
+		btnExit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				System.exit(0);
+			}
+		});
+	}
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Login frame = new Login();
+					LoginUI frame = new LoginUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +68,7 @@ public class Login extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Login() {
+	public LoginUI() {
 		setBackground(new Color(240, 240, 240));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 412, 300);
@@ -71,16 +99,15 @@ public class Login extends JFrame {
 		lblNewLabel_1_1.setBounds(29, 133, 82, 32);
 		contentPane.add(lblNewLabel_1_1);
 		
-		textField = new JTextField();
-		textField.setBounds(121, 69, 200, 37);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		usernameField = new JTextField();
+		usernameField.setBounds(121, 69, 200, 37);
+		contentPane.add(usernameField);
+		usernameField.setColumns(10);
 		
 		passwordField = new JPasswordField();
 		passwordField.setBounds(121, 133, 200, 37);
 		contentPane.add(passwordField);
 		
-		JButton ButtonLogin = new JButton("Login");
 		ButtonLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -92,12 +119,14 @@ public class Login extends JFrame {
 		ButtonLogin.setBorderPainted(false);
 		contentPane.add(ButtonLogin);
 		
-		JButton btnExit = new JButton("Exit");
+		
 		btnExit.setForeground(new Color(64, 0, 64));
 		btnExit.setFont(new Font("Tahoma", Font.BOLD, 17));
 		btnExit.setBorderPainted(false);
 		btnExit.setBackground(Color.LIGHT_GRAY);
 		btnExit.setBounds(229, 195, 94, 49);
 		contentPane.add(btnExit);
+		
+		Event();
 	}
 }

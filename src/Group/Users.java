@@ -1,4 +1,4 @@
-package Giaodien;
+package Group;
 
 import java.awt.EventQueue;
 
@@ -20,10 +20,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+
+import Client.ClientUI;
+import Client.TaoNhom;
+
 import javax.swing.border.BevelBorder;
 import javax.swing.JScrollPane;
 
-public class TrangUsers extends JFrame {
+public class Users extends JFrame {
 
 	private static final Window JScorllPane = null;
 	private JPanel contentPane;
@@ -37,7 +41,7 @@ public class TrangUsers extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TrangUsers frame = new TrangUsers();
+					Users frame = new Users();
 					frame.setVisible(true);
 					frame.setTitle("Users");
 				} catch (Exception e) {
@@ -50,7 +54,7 @@ public class TrangUsers extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TrangUsers() {
+	public Users() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 367, 588);
 		contentPane = new JPanel();
@@ -91,7 +95,7 @@ public class TrangUsers extends JFrame {
 		});
 		ButtonFind.setForeground(new Color(255, 255, 255));
 		ButtonFind.setBackground(new Color(0, 64, 128));
-		ButtonFind.setIcon(new ImageIcon(TrangUsers.class.getResource("/Img/find (1).png")));
+		ButtonFind.setIcon(new ImageIcon(Users.class.getResource("/Img/find (1).png")));
 		ButtonFind.setBounds(254, 110, 47, 48);
 		ButtonFind.setBorderPainted(false);
 		contentPane.add(ButtonFind);
@@ -104,20 +108,20 @@ public class TrangUsers extends JFrame {
 		});
 		ButtonAdd.setForeground(new Color(0, 0, 0));
 		ButtonAdd.setBackground(new Color(0, 64, 128));
-		ButtonAdd.setIcon(new ImageIcon(TrangUsers.class.getResource("/Img/add (1).png")));
+		ButtonAdd.setIcon(new ImageIcon(Users.class.getResource("/Img/add (1).png")));
 		ButtonAdd.setBounds(210, 10, 47, 48);
 		ButtonAdd.setBorderPainted(false);
 		contentPane.add(ButtonAdd);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon(TrangUsers.class.getResource("/Img/hr (1).png")));
+		lblNewLabel_2.setIcon(new ImageIcon(Users.class.getResource("/Img/hr (1).png")));
 		lblNewLabel_2.setBounds(49, 69, 264, 3);
 		contentPane.add(lblNewLabel_2);
 		
 		JButton ButtonChat = new JButton("Chat");
 		ButtonChat.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				KhungChat chat = new KhungChat();
+				ClientUI chat = new ClientUI();
                 chat.setVisible(true);
 				dispose();
 			}

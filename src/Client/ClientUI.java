@@ -1,4 +1,4 @@
-package Giaodien;
+package Client;
 
 import java.awt.EventQueue;
 
@@ -19,7 +19,7 @@ import com.jgoodies.forms.factories.DefaultComponentFactory;
 import java.awt.Panel;
 import javax.swing.JTextField;
 
-public class KhungChat extends JFrame {
+public class ClientUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField tfName;
@@ -27,11 +27,14 @@ public class KhungChat extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	public void Event() {
+		
+	}
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					KhungChat frame = new KhungChat();
+					ClientUI frame = new ClientUI();
 					frame.setVisible(true);
 			        frame.setTitle("Khung Chat");
 				} catch (Exception e) {
@@ -44,7 +47,7 @@ public class KhungChat extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public KhungChat() {
+	public ClientUI() {
 		setBackground(new Color(192, 192, 192));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 513, 676);
@@ -66,13 +69,13 @@ public class KhungChat extends JFrame {
 			}
 		});
 		ButtonLink.setBackground(new Color(0, 64, 128));
-		ButtonLink.setIcon(new ImageIcon(KhungChat.class.getResource("/Img/link (1).png")));
+		ButtonLink.setIcon(new ImageIcon(ClientUI.class.getResource("/Img/link (1).png")));
 		ButtonLink.setFont(new Font("Tahoma", Font.BOLD, 15));
 		ButtonLink.setBounds(29, 517, 48, 42);
 		ButtonLink.setBorderPainted(false);
 		contentPane.add(ButtonLink);
 		
-		JButton ButtonSend = new JButton(new ImageIcon(KhungChat.class.getResource("/Img/send.png")));
+		JButton ButtonSend = new JButton(new ImageIcon(ClientUI.class.getResource("/Img/send.png")));
 		ButtonSend.setBackground(new Color(0, 64, 128));
 		ButtonSend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -89,7 +92,7 @@ public class KhungChat extends JFrame {
 		contentPane.add(panel);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon(KhungChat.class.getResource("/Img/hr (1).png")));
+		lblNewLabel_2.setIcon(new ImageIcon(ClientUI.class.getResource("/Img/hr (1).png")));
 		lblNewLabel_2.setBounds(122, 60, 264, 3);
 		contentPane.add(lblNewLabel_2);
 		
@@ -103,7 +106,7 @@ public class KhungChat extends JFrame {
 		JButton btnOut = new JButton("");
 		btnOut.setBackground(new Color(0, 64, 128));
 		btnOut.setBorderPainted(false);
-		btnOut.setIcon(new ImageIcon(KhungChat.class.getResource("/Img/out (1).png")));
+		btnOut.setIcon(new ImageIcon(ClientUI.class.getResource("/Img/out (1).png")));
 		btnOut.setBounds(416, 10, 58, 53);
 		contentPane.add(btnOut);
 	}
