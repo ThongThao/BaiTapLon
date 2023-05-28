@@ -13,11 +13,11 @@ public class ThreadClientInput extends Thread{
 	public void run() {
 		DataInputStream dis = null;
 		try {
-			dis = new DataInputStream(client.getInputStream());
-			while(true) {
-				String sms = dis.readUTF();
-				System.out.println(sms);
-			}
+		    dis = new DataInputStream(client.getInputStream());
+		    while(true) {
+			String sms = dis.readUTF();
+			System.out.println(sms);
+		    }
 		} catch (Exception e) {
 			// TODO: handle exception
 			try {
