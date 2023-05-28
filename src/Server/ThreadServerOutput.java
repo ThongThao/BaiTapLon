@@ -15,8 +15,8 @@ public class ThreadServerOutput extends Thread{
 			String sms = sc.nextLine();	
 				try {
 					for(Socket item : ServerUI.listsx) {
-					dos = new  DataOutputStream(item.getOutputStream());
-					dos.writeUTF("Server: "+sms);
+					 dos = new  DataOutputStream(item.getOutputStream());
+					 dos.writeUTF("Server: "+sms);
 					}
 				} catch (IOException e) {
 					// TODO Auto-generated catch block

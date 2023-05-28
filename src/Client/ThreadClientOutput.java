@@ -9,16 +9,16 @@ public class ThreadClientOutput extends Thread{
 	public ThreadClientOutput(Socket client, String name) {
 		super();
 		this.client     = client;
-		this.name 	= name;
+		this.name 	    = name;
 	}
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		DataOutputStream 	dos 	= null;
-		Scanner 		sc 	= null;
+		Scanner 		    sc 	    = null;
 		try {
 			dos     = new DataOutputStream(client.getOutputStream());
-			sc 	= new Scanner(System.in);
+			sc   	= new Scanner(System.in);
 			while(true) {
 				String sms =  sc.nextLine();
 				dos.writeUTF(name+": "+sms);

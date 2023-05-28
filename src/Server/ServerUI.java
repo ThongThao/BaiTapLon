@@ -24,7 +24,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 
 public class ServerUI extends JFrame {
-	public static 	ArrayList<Socket> 	listsx;
+	public static 	ArrayList<Socket> 	    listsx;
 	public          JPanel                  contentPane;
 	                JTextField              inputPort;
 	                JButton                 btnStart = new JButton("Start Server");

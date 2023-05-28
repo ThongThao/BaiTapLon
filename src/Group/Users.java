@@ -122,7 +122,7 @@ public class Users extends JFrame {
 		ButtonChat.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ClientUI chat = new ClientUI();
-                                chat.setVisible(true);
+                chat.setVisible(true);
 				dispose();
 			}
 		});
@@ -135,7 +135,7 @@ public class Users extends JFrame {
 		ButtonCGroup.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TaoNhom taoNhomFrame = new TaoNhom();
-                                taoNhomFrame.setVisible(true);
+                taoNhomFrame.setVisible(true);
 				dispose();
 		
 			}

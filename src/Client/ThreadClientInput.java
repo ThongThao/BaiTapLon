@@ -15,8 +15,8 @@ public class ThreadClientInput extends Thread{
 		try {
 		    dis = new DataInputStream(client.getInputStream());
 		    while(true) {
-			String sms = dis.readUTF();
-			System.out.println(sms);
+			    String sms = dis.readUTF();
+			    System.out.println(sms);
 		    }
 		} catch (Exception e) {
 			// TODO: handle exception

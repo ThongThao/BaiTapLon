@@ -10,7 +10,7 @@ public class ThreadServerInput extends Thread{
 	private DataInputStream  dis = null;
 	private DataOutputStream dos = null;
 	public ThreadServerInput(Socket socket) {
-		this.socket 	= socket;
+		    this.socket 	= socket;
 		
 		try {
 			this.dis 		= new 	DataInputStream(socket.getInputStream());

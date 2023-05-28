@@ -36,7 +36,7 @@ public class ClientUI extends JFrame {
 				try {
 					ClientUI frame = new ClientUI();
 					frame.setVisible(true);
-			                frame.setTitle("Khung Chat");
+			        frame.setTitle("Khung Chat");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
