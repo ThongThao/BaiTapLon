@@ -25,10 +25,10 @@ import javax.swing.ImageIcon;
 
 public class ServerUI extends JFrame {
 	public static 	ArrayList<Socket> 	listsx;
-	public JPanel contentPane;
-	JTextField inputPort;
-	JButton btnStart = new JButton("Start Server");
-	public static JTextArea view = new JTextArea();
+	public          JPanel                  contentPane;
+	                JTextField              inputPort;
+	                JButton                 btnStart = new JButton("Start Server");
+	public static   JTextArea               view     = new JTextArea();
 	/**
 	 * Launch the application.
 	 */
@@ -47,15 +47,15 @@ public class ServerUI extends JFrame {
 				}
 			}
 			private void execute() throws IOException {
-				ServerSocket server 	= new ServerSocket(Integer.parseInt(inputPort.getText()));
-				ThreadServerOutput out  		= new ThreadServerOutput();
+				ServerSocket           server 	= new ServerSocket(Integer.parseInt(inputPort.getText()));
+				ThreadServerOutput     out      = new ThreadServerOutput();
 				out.start();
 				System.out.println("Server is listening....");
 				while(true) {
-					Socket socket 	= server.accept();
+					Socket socket  = server.accept();
 					view.setText(view.getText()+"Connected with" + socket);
 					listsx.add(socket);
-					ThreadServerInput in = new ThreadServerInput(socket);
+					ThreadServerInput   in = new ThreadServerInput(socket);
 					in.start();
 				}
 			}
