@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.net.Socket;
 
 public class ThreadServerInput extends Thread{
-	private Socket socket;
-	private DataInputStream dis = null;
+	private Socket           socket;
+	private DataInputStream  dis = null;
 	private DataOutputStream dos = null;
 	public ThreadServerInput(Socket socket) {
 		this.socket 	= socket;
