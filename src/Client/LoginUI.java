@@ -21,12 +21,12 @@ import java.awt.event.ActionEvent;
 
 public class LoginUI extends JFrame {
 
-	private JPanel contentPane;
-	private JTextField usernameField;
-	private JPasswordField passwordField;
-	JButton ButtonLogin = new JButton("Login");
-	JButton btnExit = new JButton("Exit");
-	ArrayList<User> listuser;
+	private JPanel            contentPane;
+	private JTextField        usernameField;
+	private JPasswordField    passwordField;
+	        JButton           ButtonLogin = new JButton("Login");
+	        JButton           btnExit     = new JButton("Exit");
+	        ArrayList<User>   listuser;
 
 	/**
 	 * Launch the application.
