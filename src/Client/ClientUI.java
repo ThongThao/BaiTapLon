@@ -21,8 +21,8 @@ import javax.swing.JTextField;
 
 public class ClientUI extends JFrame {
 
-	private JPanel contentPane;
-	private JTextField tfName;
+	private JPanel      contentPane;
+	private JTextField  tfName;
 
 	/**
 	 * Launch the application.
@@ -36,7 +36,7 @@ public class ClientUI extends JFrame {
 				try {
 					ClientUI frame = new ClientUI();
 					frame.setVisible(true);
-			        frame.setTitle("Khung Chat");
+			                frame.setTitle("Khung Chat");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
