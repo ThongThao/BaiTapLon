@@ -24,9 +24,9 @@ import java.awt.Panel;
 
 public class TaoNhom extends JFrame {
 
-	private JPanel contentPane;
-	private JTextField textField;
-	private JTable table;
+	private JPanel       contentPane;
+	private JTextField   textField;
+	private JTable       table;
 
 
 	/**
@@ -88,7 +88,7 @@ public class TaoNhom extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ClientUI chat = new ClientUI();
-                chat.setVisible(true);
+                                chat.setVisible(true);
 				dispose();
 			}
 		});
@@ -100,7 +100,7 @@ public class TaoNhom extends JFrame {
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Users users = new Users();
-                users.setVisible(true);
+                                users.setVisible(true);
 				dispose();
 			}
 		});
